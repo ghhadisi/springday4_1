@@ -6,9 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3d2bbb2-88cc-4fa8-a488-3dd4cdb2e531" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="c3d2bbb2-88cc-4fa8-a488-3dd4cdb2e531" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +18,7 @@
     <session id="1493676173">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.opened" value="2" />
@@ -301,17 +299,17 @@
       <option name="presentableId" value="Default" />
       <updated>1553956663693</updated>
       <workItem from="1553956672191" duration="3669000" />
-      <workItem from="1553992930303" duration="3124000" />
+      <workItem from="1553992930303" duration="3417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6793000" />
+    <option name="totallyTimeSpent" value="7086000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="355" y="75" width="1400" height="937" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3632287" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3632287" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -327,7 +325,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32961586" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32961586" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="bottom" id="Application Servers" order="13" weight="0.32880098" />
