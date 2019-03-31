@@ -13,7 +13,40 @@
 	http://www.springframework.org/schema/aop/spring-aop.xsd
 	http://www.springframework.org/schema/tx
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<!-- 引入外部属性文件=============================== -->
+	<context:property-placeholder location="classpath:jdbc.properties"/>
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverClass}"/>
+		<property name="jdbcUrl" value="${jdbc.url}"/>
+		<property name="user" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+	</bean>
+	<!--spring 整合 hibernate-->
+	<!--hibernate 配置信息-->
+	<!--	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+            <property name="configLocation" value="classpath:hibernate.cfg.xml.aaaa" />
+        </bean>-->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<!-- 注入连接池 -->
+		<property name="dataSource" ref="dataSource"/>
+		<!-- 配置Hibernate的相关属性 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
 
+
+		</property>
+		<!-- 设置映射文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>com/hss/spring/domain/Customer.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
 	<!-- Spring的入门的配置==================== -->
 <!-- 	<bean name="userDAO" class="com.itheima.spring.demo1.UserDAOImpl" > -->
 <!-- 		<property name="name" value="李东"/> -->
@@ -93,9 +126,9 @@
 
 	<!--spring 整合 hibernate-->
 	<!--hibernate 配置信息-->
-	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
-		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
-	</bean>
+<!--	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="configLocation" value="classpath:hibernate.cfg.xml.aaaaaaa" />
+	</bean>-->
 	<bean id="customerDao" class="com.hss.spring.dao.CustomerDaoImpl" >
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
